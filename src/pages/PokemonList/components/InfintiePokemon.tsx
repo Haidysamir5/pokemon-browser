@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { PokemonType } from '../types';
 import PokemonCard from './PokemonCard';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import PokemonLoader from './CardSkeleton';
+import ListSkeleton from './ListSkeleton';
 import { getPokemonList } from '../utils/apis';
 import ErrorBoundary from '~/components/ErrorBoundary';
 
@@ -46,7 +46,7 @@ export default function InfintiePokemon({ limit }: { limit: number }) {
   return (
     <>
       {isLoading ? (
-        <PokemonLoader />
+        <ListSkeleton />
       ) : (
         <ErrorBoundary isError={Boolean(error) && !data?.pages}>
           <div className="flex flex-col">
@@ -56,7 +56,7 @@ export default function InfintiePokemon({ limit }: { limit: number }) {
               })}
             </div>
             <div ref={observerRef} className="mt-6 h-12 flex justify-center">
-              {isFetchingNextPage && <PokemonLoader />}
+              {isFetchingNextPage && <ListSkeleton />}
             </div>
 
             <button

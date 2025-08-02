@@ -4,7 +4,7 @@ import ErrorBoundary from '~/components/ErrorBoundary';
 import { getPokemonList } from '../utils/apis';
 import PokemonCard from './PokemonCard';
 import Pagination from './Pagination';
-import CardSkeleton from './CardSkeleton';
+import ListSkeleton from './ListSkeleton';
 import { PokemonType } from '../types';
 
 export default function PaginatedPokemon({ limit }: { limit: number }) {
@@ -18,7 +18,7 @@ export default function PaginatedPokemon({ limit }: { limit: number }) {
   return (
     <>
       {isLoading ? (
-        <CardSkeleton />
+        <ListSkeleton />
       ) : error ? (
         <p>error</p>
       ) : (

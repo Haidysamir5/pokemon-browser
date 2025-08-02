@@ -1,9 +1,9 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-export default function CardSkeleton() {
+export default function ListSkeleton() {
   return (
-    <div className="w-full grid grid-cols-4 gap-6 ">
+    <div className="w-full grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
       {Array.from({ length: 8 }).map((_, id) => (
         <div className="rounded-xl bg-white p-4 shadow" key={id}>
           <Skeleton height={160} borderRadius={12} />
