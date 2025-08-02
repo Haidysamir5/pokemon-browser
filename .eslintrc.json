@@ -1,0 +1,40 @@
+{
+  "ignorePatterns": ["config/*.js", "**/*.json"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+
+  "plugins": ["prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "eqeqeq": "warn",
+    "strict": "off",
+    "semi": ["error", "always"],
+    "prefer-const": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "@typescript-eslint/quotes": ["error", "single", { "avoidEscape": true }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true
+      }
+    ]
+  },
+  "root": true
+}
