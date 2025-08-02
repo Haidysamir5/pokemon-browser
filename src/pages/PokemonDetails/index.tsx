@@ -32,7 +32,7 @@ export default function PokemonDetails() {
         ) : (
           <ErrorBoundary isError={Boolean(error)}>
             {data && (
-              <div className="min-h-screen flex items-center justify-center px-4 py-10">
+              <div className="min-h-screen flex items-center justify-center  py-10">
                 <div className="w-full flex flex-col gap-4 max-w-xl rounded-2xl shadow-xl bg-white overflow-hidden pb-5">
                   {/* Header */}
                   <div className="bg-gradient-to-r from-purple-500 to-pink-400 text-white p-4 text-center">
@@ -42,7 +42,7 @@ export default function PokemonDetails() {
                     </p>
                   </div>
 
-                  <div className="w-full grid grid-cols-2 gap-4 px-6  items-center">
+                  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 px-6  items-center">
                     <div className="flex flex-col gap-4">
                       {/* Sprite */}
                       <div className="w-50 h-50 bg-[#f6f7f9] rounded-full flex items-center justify-center">

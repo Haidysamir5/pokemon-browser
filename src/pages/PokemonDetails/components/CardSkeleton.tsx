@@ -16,7 +16,7 @@ export default function PokemonCardSkeleton() {
           <Skeleton width={60} height={16} className="mx-auto" />
         </div>
 
-        <div className="w-full grid grid-cols-2 gap-4 px-6 items-center">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 px-6 items-center  pb-6">
           <div className="flex flex-col gap-4">
             {/* Sprite */}
             <div className="w-32 h-32 bg-[#f6f7f9] rounded-full shadow-xl flex items-center justify-center mx-auto">
