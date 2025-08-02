@@ -24,7 +24,7 @@ export default function PaginatedPokemon({ limit }: { limit: number }) {
       ) : (
         <ErrorBoundary isError={Boolean(error)}>
           <div className="flex flex-col">
-            <div className="w-full grid grid-cols-4 gap-6 ">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
               {data?.results?.map((item: PokemonType) => {
                 return <PokemonCard {...item} />;
               })}

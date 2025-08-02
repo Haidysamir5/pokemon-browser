@@ -12,7 +12,6 @@ export default function Pagination({
   const totalCount = count || 0;
   const totalPages = Math.ceil(totalCount / limit);
   const maxDisplayedPages = 5;
-
   const getPagesList = () => {
     const maxPagesList = Array.from(
       { length: maxDisplayedPages },
@@ -30,16 +29,16 @@ export default function Pagination({
       <button
         onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
         disabled={page === 1}
-        className="px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-700 text-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-8 h-8 md:w-auto md:h-10 p-2 rounded-md border border-gray-300 bg-white text-gray-700 text-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        ‹ Previous
+        ‹ <span className="hidden md:inline-block">Previous</span>
       </button>
 
       {getPagesList().map((pageNumber, idx) =>
         pageNumber === 'etc' ? (
           <span
             key={`dots-${idx}`}
-            className="w-10 h-10 flex items-center justify-center text-gray-400 text-sm"
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-400 text-sm"
           >
             ...
           </span>
@@ -47,7 +46,7 @@ export default function Pagination({
           <button
             key={pageNumber}
             onClick={() => setPage(Number(pageNumber))}
-            className={`w-10 h-10 rounded-md border text-sm font-medium transition 
+            className={`w-8 h-8 md:w-10 md:h-10 rounded-md border text-sm font-medium transition 
               ${
                 page === pageNumber
                   ? 'bg-blue-500 text-white border-blue-500'
@@ -62,9 +61,9 @@ export default function Pagination({
       <button
         onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
         disabled={page === totalPages}
-        className="px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-700 text-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+        className=" w-8 h-8 md:w-auto md:h-10 p-2 rounded-md border border-gray-300 bg-white text-gray-700 text-sm hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Next ›
+        <span className="hidden md:inline-block">Next</span> ›
       </button>
     </div>
   );
