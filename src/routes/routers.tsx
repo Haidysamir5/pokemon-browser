@@ -1,6 +1,6 @@
-import { urls } from '../helpers';
-import PokemonList from '../pokemon-list';
-import PokemonDetails from '../pokemon-details';
+import { urls } from '~/helpers';
+import PokemonList from '~/pages/PokemonList';
+import PokemonDetails from '~/pages/PokemonDetails';
 
 const routers = [
   {

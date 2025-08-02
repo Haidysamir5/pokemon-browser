@@ -1,7 +1,7 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-export default function PokemonLoader() {
+export default function CardSkeleton() {
   return (
     <div className="w-full grid grid-cols-4 gap-6 ">
       {Array.from({ length: 8 }).map((_, id) => (

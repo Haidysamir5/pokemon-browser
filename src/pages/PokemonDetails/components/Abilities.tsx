@@ -14,7 +14,7 @@ export default function Abilities({
         {abilities.map((item, i) => (
           <div
             key={i}
-            className="w-fit bg-white text-gray-900 border border-gray-300 rounded-full px-2 py-0.5 flex items-center gap-1 text-xs"
+            className="w-fit bg-white text-gray-900 border-2 border-gray-300 rounded-full px-2 py-0.5 flex items-center gap-1 text-xs"
           >
             <span className="capitalize">{item.ability.name}</span>
             {i === abilities.length - 1 && isHidden && (
